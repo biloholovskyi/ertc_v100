@@ -1,0 +1,60 @@
+@media screen and (max-width: 1199px) {
+  // main-articles
+  .main-articles  {
+    .left {
+      .info {
+        width: 100%;
+        min-width: 50%;
+      }
+
+      img {
+        width: 100%;
+        min-width: 50%;
+      }
+    }
+  }
+  // main-articles end
+
+  // all-list-news
+  .all-list-news {
+    .left {
+      .item--main {
+        .info {
+          width: 100%;
+          min-width: 50%;
+        }
+
+        img {
+          width: 100%;
+          min-width: 50%;
+        }
+      }
+
+      .item--text {
+        .info {
+          width: 100%;
+          min-width: 50%;
+        }
+
+        .article-desc {
+          width: 100%;
+          min-width: 50%;
+        }
+      }
+    }
+  }
+  // all-list-news end
+
+  // contacts
+  .contacts-page__item {
+    .right {
+      min-width: 750px;
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+  // contacts end
+}

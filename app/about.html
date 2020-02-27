@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,400,400i,700,700i|Noto+Serif:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ERTC</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<div class="about-wrapper">
+  <section class="about-home">
+    <div class="about-home__img"></div>
+    <div class="main-container">
+      <div class="about-home__title">Электронная Финансовая Система</div>
+      <img class="about-home__img--mobile" alt="ertc" src="./media/image/about.png">
+    </div>
+  </section>
+
+  <section class="about-text--new">
+    <div class="main-container">
+      <div class="about-text--new__title">О проекте</div>
+      <div class="about-text--new__desc">ERTC - это электронная финансовая система полного цикла, основана на приватном блокчейне и стейблкоине ERTCoin, эмиссия которого происходит при подтверждении права собственности на участок земли. Основная задача платформы ERTC — создание доступного, удобного и универсального платежного инструмента с низкими комиссиями, высокой степенью безопасности, быстрыми транзакциями и стабильной валютой.</div>
+    </div>
+  </section>
+</div>
+
+<section class="statistics">
+  <div class="statistics__map"></div>
+  <div class="main-container">
+    <div class="statistics__title">Статистика</div>
+    <div class="statistics__coin-title">Всего валидировано</div>
+    <div class="statistics__coin-count">
+      <span class="count">5234567 m<sup>2</sup></span>
+      <span class="rate-up">+2564</span>
+    </div>
+    <div class="statistics__coin-desc">Это больше площади России  в три раза</div>
+    <div class="statistics__coin-title">Курс ERTC</div>
+    <div class="statistics__coin-count statistics__coin-count--nav">
+      <span class="count">52.5 €</span>
+      <div class="nav">
+        <div class="item prev"></div>
+        <div class="item item--disabled next"></div>
+      </div>
+    </div>
+    <div class="statistics__graph">
+      <div class="graph-wrapper" data-count="0">
+        <canvas id="statistics__graph-item" height="100px"></canvas>
+      </div>
+    </div>
+    <div class="map-desc">
+      <div class="on">Валидировано</div>
+      <div class="next">На очереди</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let height = document.getElementById('statistics__graph-item').getContext('2d');
+  height.height = 240;
+  let gradientStroke = height.createLinearGradient(0, 230, 0, 250);
+  gradientStroke.addColorStop(0, "rgba(141, 192, 69, 0.1)");
+  gradientStroke.addColorStop(1, "rgba(141, 192, 69, 0)");
+  let chart = new Chart(height, {
+    type: 'line',
+    showTooltips: false,
+
+    data: {
+      labels: ['ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'СЕНТЯБРЬ', 'ОКТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ', 'ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ', 'МАЙ', 'ИЮНЬ', 'ИЮЛЬ', 'АВГУСТ', 'ОКТЯБРЬ', 'СЕНТЯБРЬ', 'НОЯБРЬ', 'ДЕКАБРЬ', 'ЯНВАРЬ', 'ФЕВРАЛЬ', 'МАРТ', 'АПРЕЛЬ'],
+      datasets: [{
+        label: '',
+        backgroundColor: gradientStroke,
+        pointRadius: 0,
+        borderColor: '#8DC045',
+        borderWidth: 2,
+        data: [
+          "2",
+          "3.5",
+          "3",
+          "3.3",
+          "4",
+          "3",
+          "3.9",
+          "4",
+          "5",
+          "5.1",
+          "4.9",
+          "4",
+          "5",
+          "5.8",
+          "6",
+          "7",
+          "10",
+          "11",
+          "12",
+          "12.7",
+          "11",
+          "12",
+          "13"
+        ]
+      }]
+    },
+
+    options: {
+      legend: {
+        display: false,
+        showLines: false,
+        gridLine: false
+      },
+      scales: {
+        xAxes: [{
+          display: true,
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(0,0,0,0)',
+            zeroLineColor: 'rgba(0,0,0,0)'
+          },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            fontSize: 12,
+            padding: 40,
+            fontColor: 'rgba(51, 51, 51, 0.6)'
+          }
+        }],
+        yAxes: [{
+          display: true,
+          ticks: {
+            beginAtZero: true,
+            stepSize: 2.5,
+            suggestedMax: 10,
+            fontColor: 'rgba(57, 55, 56, 0.75)',
+            fontSize: 14,
+            padding: 15,
+            maxTicksLimit: 6
+          },
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(0, 0, 0, 0.1)',
+            tickMarkLength: 0,
+            zeroLineColor: 'rgba(0,0,0,0.1)',
+            offsetGridLine: true
+          }
+        }]
+      },
+      tooltips: {
+        enabled: false
+      },
+      elements: {
+        line: {
+          tension: 0
+        }
+      }
+    }
+  });
+</script>
+
+<section class="team" data-count="0">
+  <div class="main-container">
+    <div class="team__title">
+      <div class="title">Команда</div>
+      <div class="desc">В истоке любого проекта лежит идея. И даже самый гениальный проект подвержен риску на всех этапах становления и развития. Проект ERTC и его команда пережили и продолжают переживать «невероятные приключения»!</div>
+    </div>
+    <div class="team__slider">
+<!--      <div class="team__slider__nav">-->
+<!--        <div class="item-nav item-nav&#45;&#45;disabled prev"></div>-->
+<!--        <div class="item-nav next"></div>-->
+<!--      </div>-->
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+      <div class="item">
+        <img src="./media/image/albert.png" alt="albert">
+        <div class="name">Адель А.</div>
+        <div class="position">CEO, идеолог и основатель проекта</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-news">
+
+</section>
+
+<section class="new-menu-modal">
+  <div class="list-category">
+    <a href="https://ertc.online/category/ertc">Новости ERTC</a>
+    <a href="https://ertc.online/category/news-all">Новости рынка</a>
+    <a href="https://ertc.online/category/zakon">Законодательство</a>
+    <a href="https://ertc.online/category/рубрика">Технологии</a>
+    <a href="https://ertc.online/category/news">Экономика</a>
+  </div>
+  <div class="list-nav">
+    <a href="https://ertc.online/about">О проекте</a>
+    <a href="https://ertc.online/contact">Контакты</a>
+  </div>
+  <div class="modal-lang">
+    <div class="current">Русский</div>
+    <a href="https://eng.ertc.online">English</a>
+  </div>
+  <a href="https://client.ertc.land/auth/login" target="_blank" class="modal-platform">Вход на платформу</a>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="buildjs/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.about-news {
+  padding: 160px 0;
+  background: #FAFAFA;
+
+  &__title {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 72px;
+    color: #111111;
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto 80px auto;
+  }
+
+  &__more {
+    display: block;
+    width: max-content;
+    margin: 80px auto 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 23px 30px;
+  }
+}

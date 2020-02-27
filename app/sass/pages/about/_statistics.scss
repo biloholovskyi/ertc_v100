@@ -1,0 +1,210 @@
+.statistics {
+  padding: 160px 0;
+  position: relative;
+  overflow: hidden;
+  background: #FAFAFA;
+
+  .main-container {
+    position: relative;
+  }
+
+  &__map {
+    position: absolute;
+    width: 819.71px;
+    height: 403.56px;
+    top: 283px;
+    left: 0;
+    margin-left: 50%;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../media/image/map.svg);
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 72px;
+    color: #111111;
+    margin-bottom: 36px;
+  }
+
+  &__coin-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: rgba(51, 51, 51, 0.6);
+    margin-bottom: 8px;
+  }
+
+  &__coin-count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 37px;
+    letter-spacing: -0.01em;
+    color: #111111;
+
+    .count {
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 37px;
+      letter-spacing: -0.01em;
+      color: #111111;
+
+      sup {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: -0.01em;
+        color: #111111;
+      }
+    }
+
+    .rate-up {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #FFFFFF;
+      margin-left: 15px;
+      padding: 9px 12px 9px 32px;
+      background: #8DC045;
+      border-radius: 100px;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 0;
+        margin-left: 12px;
+        margin-top: -8px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../media/icon/rate-up.svg);
+      }
+    }
+
+    &--nav {
+      justify-content: space-between;
+      max-width: 520px;
+
+      .nav {
+        display: flex;
+
+        .item {
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-image: url(../media/icon/btn.svg);
+          background-size: 16px;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: all .3s;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &--disabled {
+            opacity: 0.4;
+
+            &:hover {
+              cursor: default;
+            }
+          }
+        }
+
+        .prev {
+          margin-right: 24px;
+        }
+
+        .next {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__coin-desc {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #333333;
+    margin-bottom: 30px;
+  }
+
+  &__graph {
+    max-width: 550px;
+    margin-top: 28px;
+    position: relative;
+    overflow: hidden;
+
+    .graph-wrapper {
+      width: 2000px;
+      transition: all .3s;
+      transform: translateX(calc(-100%));
+      margin-left: 100%;
+    }
+
+    canvas {
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      height: 246px;
+    }
+  }
+
+  .map-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: -30px;
+
+    .on,
+    .next {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      color: #333333;
+      padding-left: 22px;
+      position: relative;
+
+      &::after {
+        content: '';
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        margin-top: -5px;
+        left: 0;
+        position: absolute;
+      }
+    }
+
+    .on {
+      margin-right: 65px;
+
+      &::after {
+        background: #8DC045;
+      }
+    }
+
+    .next {
+      &::after {
+        background: #CCD642;
+      }
+    }
+  }
+}

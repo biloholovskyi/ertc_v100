@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/*settings*/
+@import "fonts";
+@import "var";
+@import "grid";
+@import "block-form";
+
+/*over use blocks*/
+@import "header";
+@import "footer";
+
+/*pages*/
+/*home*/
+@import "pages/home/rubricator";
+@import "pages/home/all-articles";
+@import "pages/home/main-articles";
+@import "pages/home/all-list-news";
+
+/*single*/
+@import "pages/single/article-single";
+@import "pages/single/reed-more";
+
+/*contacts*/
+@import "pages/contacts/contacts-page";
+
+/*about*/
+@import "pages/about/about-home";
+@import "pages/about/about-text";
+@import "pages/about/statistics";
+@import "pages/about/about-news";
+@import "pages/about/team";
+
+/*category*/
+@import "pages/category/category-page";
+
+/*documentation*/
+@import "pages/documentation/documentation-page";
+
+/*media*/
+@import "media/1260";
+@import "media/1199";
+@import "media/1100";
+@import "media/991";
+@import "media/800";
+@import "media/767";
+@import "media/575";

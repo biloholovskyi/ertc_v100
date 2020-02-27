@@ -1,0 +1,112 @@
+@media screen and (max-width: 575px) {
+  .contacts-page__title {
+    font-size: 60px;
+  }
+
+  // form
+  .block-form__row {
+    .left {
+      .title {
+        font-size: 40px;
+      }
+    }
+    .right {
+      form {
+        .input-double {
+          flex-direction: column;
+
+          .input-wrapper {
+            &:first-child {
+              margin-right: 0;
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // form end
+
+  // about
+  .about-home {
+    .about-home__title {
+      font-size: 36px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-home__img {
+      background-position: left;
+      background-size: cover;
+    }
+  }
+
+  .about-text--new {
+    .about-text--new__title {
+      font-size: 36px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-text__desc {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  // about end
+
+  // statistics
+  .statistics {
+    .statistics__title {
+      font-size: 46px;
+    }
+    .statistics__coin-count {
+      .count {
+        font-size: 32px;
+      }
+    }
+    .statistics__map {
+      margin: 0 80px 0 15px;
+      background-size: 80%;
+    }
+
+    .map-desc {
+      position: relative;
+      width: 100%;
+      margin: 40px 0 0 0;
+      flex-direction: column;
+
+      .on {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  // statistics end
+
+  .team {
+    padding: 40px 0;
+  }
+
+  .documentation-page__title {
+    font-size: 40px;
+  }
+
+  .team__slider {
+    .item {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .page-video__row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .page-video__item {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

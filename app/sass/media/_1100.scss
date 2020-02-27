@@ -1,0 +1,22 @@
+@media screen and (max-width: 1100px) {
+  // contacts
+  .contacts-page__item {
+    flex-direction: column;
+
+    .right {
+      margin-left: 0;
+      margin-top: 32px;
+    }
+  }
+  // contacts end
+
+  // catalog
+  .item--double {
+    img {
+      width: 100%;
+      max-width: 50%;
+      min-width: 50%;
+    }
+  }
+  // catalog end
+}

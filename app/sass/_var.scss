@@ -1,0 +1,407 @@
+// articles classes
+.category-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.article-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+.article-title-small {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+.bold-article-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 16px;
+
+  &--mt {
+    margin-top: 32px;
+  }
+}
+
+.article-desc {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #333333;
+}
+
+.article-time {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #333333;
+  opacity: 0.6;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.three-row {
+  display: flex;
+  justify-content: space-between;
+
+  .item {
+    width: 100%;
+    max-width: calc(100% / 3 - 48px);
+
+    img {
+      height: 276px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 16px;
+    }
+
+    .category-name {
+      margin-bottom: 8px;
+    }
+
+    .three-row__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -0.01em;
+      color: #111111;
+      margin-bottom: 16px;
+    }
+
+    .article-desc {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.category-border {
+  display: none;
+}
+
+.item--double {
+  display: flex;
+  margin-bottom: 45px;
+  margin-top: 32px;
+  min-width: 100%;
+
+  .info {
+    .category-name {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -.01em;
+      color: #111;
+      margin-bottom: 16px;
+    }
+
+    .article-desc {
+      margin-bottom: 16px;
+    }
+  }
+
+  img {
+    width: 784px;
+    min-width: 784px;
+    height: 352px;
+    object-position: center;
+    object-fit: cover;
+    margin-right: 32px;
+  }
+}
+
+.new-menu-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff;
+  top: -150%;
+  left: 0;
+  padding: 85px 16px 16px 16px;
+  overflow: auto;
+  transition: all .3s ease;
+
+  .list-category,
+  .list-nav {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    a {
+      display: block;
+      line-height: 48px;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: #111111;
+    }
+  }
+
+  .list-nav {
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .modal-lang {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #8DC045;
+    border-radius: 4px;
+
+    .current {
+      width: 100%;
+      min-width: 50%;
+      border-bottom: 1px solid #8DC045;
+      padding: 9px 0;
+      text-align: center;
+      background: rgba(141, 192, 69, 0.2);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+      color: #8DC045;
+    }
+
+    a {
+      width: 100%;
+      min-width: 50%;
+      padding: 9px 0;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+      color: rgba(51, 51, 51, 0.36);
+    }
+  }
+
+  .modal-platform {
+    display: block;
+    padding: 9px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    background: #8DC045;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+}
+
+
+// Montserrat title
+.header {
+  .header__left {
+    .header__nav {
+      li {
+        a {
+          font-family: 'Montserrat', 'Times New Roman', serif;
+        }
+      }
+    }
+
+    .enter-platform {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+
+    .lang {
+      .lang__link {
+        font-family: 'Montserrat', 'Times New Roman', serif;
+      }
+    }
+  }
+
+  .header__right {
+    .header__coins {
+      .item {
+        .count {
+          font-family: 'Montserrat', 'Times New Roman', serif;
+
+          span {
+            font-family: 'Montserrat', 'Times New Roman', serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rubricator {
+  .item {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+  }
+}
+
+.main-articles {
+  .left {
+    .info {
+      .title {
+        font-family: 'Montserrat', 'Times New Roman', serif;
+      }
+    }
+  }
+}
+
+.article-title-small {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.bold-article-title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.article-title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.article-single__title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.three-row {
+  .item {
+    .three-row__title {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+}
+
+.about-home__title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.about-text--new__title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.statistics__title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.statistics__coin-count {
+  .count {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+
+    sup {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+}
+
+.team__title {
+  .title {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+  }
+}
+
+.contacts-page__title {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
+
+.contacts-page__item {
+  .left {
+    .title {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+}
+
+.block-form__row {
+  .left {
+    .title {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+}
+
+.footer {
+  * {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+  }
+}
+
+.new-menu-modal {
+  .list-category {
+    a {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+
+  .list-nav {
+    a {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+
+  .modal-lang {
+    .current {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+
+    a {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+
+  .modal-platform {
+    font-family: 'Montserrat', 'Times New Roman', serif;
+  }
+}
+
+.item--double {
+  .info {
+    .title {
+      font-family: 'Montserrat', 'Times New Roman', serif;
+    }
+  }
+}
+
+.category-page {
+  .main-container {
+    .item--three {
+      .three-row__title {
+        font-family: 'Montserrat', 'Times New Roman', serif;
+      }
+    }
+  }
+}
+
+.header__right {
+  .header__coins {
+    .item {
+      .title {
+        font-family: 'Montserrat', 'Times New Roman', serif;
+      }
+    }
+  }
+}
+
+.category-name {
+  font-family: 'Montserrat', 'Times New Roman', serif;
+}
